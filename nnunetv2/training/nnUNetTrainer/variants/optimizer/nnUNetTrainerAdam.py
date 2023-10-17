@@ -64,7 +64,7 @@ class nnUNetTrainerAdamGregor(nnUNetTrainer):
                  device: torch.device = torch.device('cuda')):
         super().__init__(plans, configuration, fold, dataset_json, unpack_dataset, device)
         self.initial_lr = 3e-4
-        self.num_epochs = 150
+        self.num_epochs = 500
     def configure_optimizers(self):
         optimizer = Adam(self.network.parameters(),
                          lr=self.initial_lr,
